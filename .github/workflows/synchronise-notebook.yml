@@ -1,0 +1,69 @@
+# Copyright (c) 2023 Graphcore Ltd. All rights reserved.
+name: 'Copy notebooks from source repos'
+
+on:
+  pull_request:
+  schedule:
+    - cron:  '56 * * * *'
+
+jobs:
+  copy-notebooks:
+    name:
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: Checkout notebooks
+      uses: actions/checkout@v3
+      with:
+        path: notebooks/
+        ref: ${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}
+    - name: install dependencies
+      id: install-dependencies
+      run: |
+        pip install -r notebooks/.github/requirements.txt
+    - name: Establish list of deployment_specs to check
+      id: list-changed-yaml
+      run: |
+        set -x
+        pip install yq==3.2.1
+        deployment_specs='[]'
+        if [ -z "${{ inputs.deployment_spec }}" ]; then
+            echo "Using changed files as trigger"
+            deployment_specs=".github/notebook-source.yaml"
+        else
+            deployment_specs='${{ inputs.deployment_spec }}'
+        fi
+        echo $deployment_specs > active-deployment-specs.txt
+    - name: Run deployment script
+      id: run-changed-yaml
+      run: |
+        set -x
+        echo Running the following spec files: $deployment_spec
+        for spec in `cat active-deployment-specs.txt`
+        do
+          python notebooks/.github/copy.py --spec "notebooks/$spec" | tee "deployment_stdout_$(basename $spec).out"
+        done
+    - name: Prepare logs for upload
+      run: |
+        set +e
+        mkdir copy-logs/
+        cp deployment_*.json copy-logs/
+        cp active-deployment-specs.txt copy-logs/
+    - name: Upload Summary Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        path: copy-logs
+        name: deployment-logs
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@284f54f989303d2699d373481a0cfa13ad5a6666
+      with:
+        path: notebooks
+        title: Synchronise files on '${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}' with source repositories
+        body: |
+          Automatic PR capturing the changes to the files defined in
+          .github/notebook-source.yaml. This PR indicates that files have changed
+          in the source repositories.
+        base: ${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}
+        labels: automated-pr
+        branch: gh-action-branches/${{ ( github.event_name == 'pull_request' && github.head_ref ) || github.ref_name }}
+        delete-branch: true

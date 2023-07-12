@@ -1,0 +1,24 @@
+_gradient_huggingface: &_gradient_huggingface
+  origin: https://github.com/graphcore/Gradient-HuggingFace.git
+  ref: main
+
+
+_common_target_repository: &_common_target_repository
+    origin: notebooks/
+    ref: null
+
+whisper:
+  source:
+    paths:
+    - expression: '*'
+      path: whisper/whisper-example.ipynb
+      recursive: true
+    repository:
+      <<: *_gradient_huggingface
+      prefix: notebooks/
+  target:
+    renames:
+      ./whisper-example.ipynb: ./whisper-ipu.ipynb
+    repository:
+      <<: *_common_target_repository
+      prefix: ./
