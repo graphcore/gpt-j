@@ -3,32 +3,39 @@
   <img width="300" alt="Graphcore logo" src="https://user-images.githubusercontent.com/81682248/226963440-9cae0ac4-ebf5-407a-9870-5679e434cada.png">
 </picture>
 
-# [Model title]
+# GPT-J
 
-[Insert an image, for example:]
-<img width="500" alt="Waveform" src="https://github.com/graphcore/whisper/assets/81682248/5f21338f-5358-4686-97cc-1f321405607f">
+<p align="center"><img width="500" alt="Waveform" src="gpt-j-header.jpg"></p>
 
-[Short description of notebook]
-Whisper is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
+GPT-J is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
 
 Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can access advanced, cost-efficient IPU compute on-demand in the cloud for building, fine-tuning and deploying AI models such as Whisper.
 
 
-## [Model] notebooks powered by IPUs
+## GPT-J notebooks powered by IPUs
 
-| Notebook | Framework | Type | Try for Free 
+| Notebook | Framework | Type | Try for Free
 | ------------- | ------------- | ------------- | ------------- |
-| [Notebook title] | Hugging Face, PyTorch, TensorFlow | Training, Fine-tuning, Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/RxNoMC)
+| Textual Entailment on IPU using GPT-J - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)]()
 
 [Description of notebook, for example]
-In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs. 
+In this notebook, we demonstrate fine-tuning GPT-J 6B on the using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
+
+| Notebook | Framework | Type | Try for Free
+| ------------- | ------------- | ------------- | ------------- |
+| Text generation with GPT-J 6B | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)]()
+
+[Description of notebook, for example]
+In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
 
 
-## [Model] resources
+
+## GPT-J resources
 
 * [GitHub Code](https://github.com/graphcore/Gradient-HuggingFace/tree/main/early-access/whisper)
-* [Hugging Face Model](https://huggingface.co/Graphcore/whisper-tiny-ipu)
-* [How-to Walkthrough Blog](https://www.graphcore.ai/posts/how-to-use-openais-whisper-for-speech-recognition)
+* [Hugging Face Model](https://huggingface.co/EleutherAI/gpt-j-6b)
+* [Blog](https://www.graphcore.ai/posts/fine-tuned-gpt-j-a-cost-effective-alternative-to-gpt-4-for-nlp-tasks)
+* [How-to walkthrough blog](https://www.graphcore.ai/posts/gpt-j-fine-tuning-tutorial-walkthrough)
 * [Original Paper](https://arxiv.org/abs/2212.04356)
 
 To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
