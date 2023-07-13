@@ -7,18 +7,15 @@ _common_target_repository: &_common_target_repository
     origin: notebooks/
     ref: null
 
-whisper:
+gpt-j:
   source:
     paths:
-    - expression: '*'
-      path: whisper/whisper-example.ipynb
-      recursive: true
+      - path: gptj-text-generation/GPTJ-generative-inference.ipynb
+      - path: gptj-text-generation/finetuning.ipynb
     repository:
       <<: *_gradient_huggingface
-      prefix: notebooks/
+      prefix: gptj-text-generation/
   target:
-    renames:
-      ./whisper-example.ipynb: ./whisper-ipu.ipynb
     repository:
       <<: *_common_target_repository
       prefix: ./

@@ -7,9 +7,9 @@
 
 ![GPT-J header](gpt-j-header.jpg)
 
-GPT-J is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
+GPT-J is an open-source alternative to OpenAI's GPT-3 from EleutherAI. It’s a 6B parameter version of GPT-3 that anyone can download and which performs just as well as larger models on many language tasks. While not as powerful as larger models for free text-generation, medium-size auto-regressive models like GPT-J can still be successfully fine-tuned to handle a range of NLP tasks such as question answering, sentiment analysis, and named entity recognition.
 
-Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can access advanced, cost-efficient IPU compute on-demand in the cloud for building, fine-tuning and deploying AI models such as Whisper.
+Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can access advanced, cost-efficient IPU compute on-demand in the cloud for building, fine-tuning and deploying AI models such as GPT-J.
 
 
 ## GPT-J notebooks powered by IPUs
@@ -17,28 +17,22 @@ Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massi
 | Notebook | Framework | Type | Try for Free
 | ------------- | ------------- | ------------- | ------------- |
 | Textual Entailment on IPU using GPT-J - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)]()
-
-[Description of notebook, for example]
-In this notebook, we demonstrate fine-tuning GPT-J 6B on the using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
-
-| Notebook | Framework | Type | Try for Free
-| ------------- | ------------- | ------------- | ------------- |
 | Text generation with GPT-J 6B | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)]()
 
-[Description of notebook, for example]
-In this Paperspace Gradient notebook, we demonstrate using Whisper Tiny for speech recognition and transcription on the IPU. We use Optimum Graphcore - a new open-source library and toolkit that enables developers to access IPU-optimized models certified by Hugging Face. Only a few lines of code are needed to get this state-of-the-art automated speech recognition model running on IPUs.
+In the **Textual Entailment on IPU using GPT-J - Fine-tuning** notebook, we show how to fine-tune a pre-trained GPT-J model running on a 16-IPU system on Paperspace. We will explain how you can fine-tune GPT-J for Text Entailment on the GLUE MNLI dataset to reach SOTA performance, whilst being much more cost-effective than its larger cousins.
 
+In the **Text generation with GPT-J 6B** notebook, we demonstrate how easy it is to run GPT-J on the Graphcore IPU using this implementation of the model and 🤗 Hub checkpoints of the model weights.
 
 
 ## GPT-J resources
 
-* [GitHub Code](https://github.com/graphcore/Gradient-HuggingFace/tree/main/early-access/whisper)
+* [GitHub Code](https://github.com/graphcore/Gradient-HuggingFace/tree/main/gptj-text-generation)
 * [Hugging Face Model](https://huggingface.co/EleutherAI/gpt-j-6b)
 * [Blog](https://www.graphcore.ai/posts/fine-tuned-gpt-j-a-cost-effective-alternative-to-gpt-4-for-nlp-tasks)
 * [How-to walkthrough blog](https://www.graphcore.ai/posts/gpt-j-fine-tuning-tutorial-walkthrough)
 * [Original Paper](https://arxiv.org/abs/2212.04356)
 
-To take your Whisper usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/speak-to-an-expert-whisper-ai).
+To take your GPT-J usage on IPUs further, or speak to an expert, please feel free to [contact us](https://www.graphcore.ai/contact).
 
 ## IPU community
 
