@@ -3,9 +3,9 @@
   <img width="300" alt="Graphcore logo" src="https://user-images.githubusercontent.com/81682248/226963440-9cae0ac4-ebf5-407a-9870-5679e434cada.png">
 </picture>
 
-# GPT-J
+# GPT-J on IPUs
 
-<p align="center"><img width="500" alt="Waveform" src="gpt-j-header.jpg"></p>
+![GPT-J header](gpt-j-header.jpg)
 
 GPT-J is a versatile speech recognition model that can transcribe speech as well as perform multi-lingual translation and recognition tasks. It was trained on diverse datasets to give human-level speech recognition performance without the need for fine-tuning.
 
