@@ -16,8 +16,8 @@ Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massi
 
 | Notebook | Framework | Type | Try for Free
 | ------------- | ------------- | ------------- | ------------- |
-| Textual Entailment on IPU using GPT-J - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)]()
-| Text generation with GPT-J 6B | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)]()
+| Textual Entailment on IPU using GPT-J - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/czHSUi)
+| Text generation with GPT-J 6B | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/OMBQrl)
 
 In the **Textual Entailment on IPU using GPT-J - Fine-tuning** notebook, we show how to fine-tune a pre-trained GPT-J model running on a 16-IPU system on Paperspace. We will explain how you can fine-tune GPT-J for Text Entailment on the GLUE MNLI dataset to reach SOTA performance, whilst being much more cost-effective than its larger cousins.
 
