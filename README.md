@@ -3,13 +3,14 @@
   <img width="300" alt="Graphcore logo" src="https://user-images.githubusercontent.com/81682248/226963440-9cae0ac4-ebf5-407a-9870-5679e434cada.png">
 </picture>
 
-# GPT-J on IPUs
+# GPT-J and GPT-J-6B on IPUs
 
 ![GPT-J header](gpt-j-header.jpg)
 
-GPT-J is an open-source alternative to OpenAI's GPT-3 from EleutherAI. It’s a 6B parameter version of GPT-3 that anyone can download and which performs just as well as larger models on many language tasks. While not as powerful as larger models for free text-generation, medium-size auto-regressive models like GPT-J can still be successfully fine-tuned to handle a range of NLP tasks such as question answering, sentiment analysis, and named entity recognition.
+GPT-J is an open-source alternative from EleutherAI to OpenAI's GPT-3. Available for anyone to download, GPT-J can be successfully fine-tuned to perform just as well as large models on a range of NLP tasks including question answering, sentiment analysis, and named entity recognition.
 
-Graphcore's IPU (Intelligence Processing Unit) is a completely new kind of massively parallel processor to accelerate machine intelligence. Developers can access advanced, cost-efficient IPU compute on-demand in the cloud for building, fine-tuning and deploying AI models such as GPT-J.
+Try running GPT-J for yourself on Paperspace with Graphcore's IPU (Intelligence Processing Unit), a completely new kind of massively parallel processor to accelerate machine intelligence. Access advanced, cost-efficient IPU compute on demand in the cloud on Paperspace to build, fine-tune and deploy AI models such as GPT-J.
+
 
 
 ## GPT-J notebooks powered by IPUs
