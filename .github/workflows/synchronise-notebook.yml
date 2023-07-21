@@ -5,6 +5,12 @@ on:
   pull_request:
   schedule:
     - cron:  '56 * * * *'
+  workflow_dispatch:
+    inputs:
+      deployment_spec:
+        description: The name of a copy config file
+        type: string
+        required: false
 
 jobs:
   copy-notebooks:
@@ -36,7 +42,7 @@ jobs:
     - name: Run deployment script
       id: run-changed-yaml
       run: |
-        set -x
+        set -xe
         echo Running the following spec files: $deployment_spec
         for spec in `cat active-deployment-specs.txt`
         do
