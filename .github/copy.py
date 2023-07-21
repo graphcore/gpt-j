@@ -261,7 +261,7 @@ class Target(NamedTuple):
         d = DictListGetter(d_in, cls._fields)
         return cls(
             Repository.from_dict(d["repository"]),
-            {k: Path(v) for k, v in d["renames"].items()},
+            {k: Path(v) for k, v in d.get("renames", {}).items()},
         )
 
     def define_target_paths(self, target_directory: Path, source_entries: Dict[str, Path]) -> Dict[str, PathCopy]:
