@@ -45,7 +45,7 @@ jobs:
     - name: Run deployment script
       id: run-changed-yaml
       run: |
-        set -xe
+        set -xeo pipefail
         echo Running the following spec files: $deployment_spec
         for spec in `cat active-deployment-specs.txt`
         do
