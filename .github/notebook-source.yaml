@@ -10,7 +10,7 @@ _common_target_repository: &_common_target_repository
 gpt-j:
   source:
     paths:
-      - path: gptj-text-generation/*.*
+      - path: gptj-text-generation/
     repository:
       <<: *_gradient_huggingface
       prefix: gptj-text-generation/
