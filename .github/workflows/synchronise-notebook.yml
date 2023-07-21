@@ -3,6 +3,8 @@ name: 'Copy notebooks from source repos'
 
 on:
   pull_request:
+  push:
+    branches: [main]
   schedule:
     - cron:  '56 * * * *'
   workflow_dispatch:
