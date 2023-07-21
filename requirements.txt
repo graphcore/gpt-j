@@ -1,0 +1,24 @@
+--find-links https://download.pytorch.org/whl/cpu/torch_stable.html
+
+
+graphcore-cloud-tools[logger] @ git+https://github.com/graphcore/graphcore-cloud-tools
+examples-utils[common] @ git+https://github.com/graphcore/examples-utils@latest_stable
+pyyaml==5.4.1
+dataclasses==0.8; python_version < '3.7'
+transformers>=4.18.0
+datasets
+evaluate==0.4.0
+tfrecord==1.14.1
+torch==1.13.1+cpu
+numpy
+scipy>=1.5.4
+more-itertools==8.13.0
+wandb==0.12.8
+scikit-learn
+
+pytest==6.2.5
+pytest-pythonpath==0.7.4
+
+git+https://github.com/graphcore/popxl-addons.git@sdk-release-3.2
+
+protobuf==3.20.*; python_version > '3.6'
