@@ -2,22 +2,37 @@ _gradient_huggingface: &_gradient_huggingface
   origin: https://github.com/graphcore/Gradient-HuggingFace.git
   ref: main
 
-
 _common_target_repository: &_common_target_repository
     origin: notebooks/
     ref: null
+
+_examples_internal_repository: &_examples_internal_repository
+  origin: examples-internal/
+  ref: null
+
 
 gpt-j:
   source:
     paths:
       - path: gptj-text-generation/
-      - path: LICENSE.md
     repository:
       <<: *_gradient_huggingface
       prefix: gptj-text-generation/
   target:
-    renames:
-      ./LICENSE.md: ./LICENSE
+    repository:
+      <<: *_common_target_repository
+      prefix: ./
+
+
+gptj-license:
+  source:
+    paths:
+      - path: LICENSE
+    repository:
+      <<: *_examples_internal_repository
+      prefix: ./
+  target:
+    renames: {}
     repository:
       <<: *_common_target_repository
       prefix: ./
