@@ -11,13 +11,11 @@ gpt-j:
   source:
     paths:
       - path: gptj-text-generation/
-      - path: LICENSE.md
+      - path: LICENSE
     repository:
       <<: *_gradient_huggingface
       prefix: gptj-text-generation/
   target:
-    renames:
-      ./LICENSE.md: ./LICENSE
     repository:
       <<: *_common_target_repository
       prefix: ./
