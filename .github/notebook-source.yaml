@@ -7,7 +7,7 @@ _common_target_repository: &_common_target_repository
     ref: null
 
 _examples_internal_repository: &_examples_internal_repository
-  origin: https://github.com/graphcore/examples-internal.git
+  origin: https://github.com/graphcore/examples.git
   ref: master
 
 
