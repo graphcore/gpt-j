@@ -7,8 +7,8 @@ _common_target_repository: &_common_target_repository
     ref: null
 
 _examples_internal_repository: &_examples_internal_repository
-  origin: examples-internal/
-  ref: null
+  origin: https://github.com/graphcore/examples-internal.git
+  ref: master
 
 
 gpt-j:
