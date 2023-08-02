@@ -27,7 +27,6 @@ In the **Text generation with GPT-J 6B** notebook, we demonstrate how easy it is
 
 ## GPT-J resources
 
-* [GitHub Code](https://github.com/graphcore/Gradient-HuggingFace/tree/main/gptj-text-generation)
 * [Hugging Face Model](https://huggingface.co/EleutherAI/gpt-j-6b)
 * [Blog](https://www.graphcore.ai/posts/fine-tuned-gpt-j-a-cost-effective-alternative-to-gpt-4-for-nlp-tasks)
 * [How-to walkthrough blog](https://www.graphcore.ai/posts/gpt-j-fine-tuning-tutorial-walkthrough)
@@ -40,3 +39,8 @@ To take your GPT-J usage on IPUs further, or speak to an expert, please feel fre
 Join our growing community and interact with AI experts, IPU developers and researchers. Hear the latest IPU news and get access to our newest models.
 
 [![Join our Slack Community](https://img.shields.io/badge/Slack-Join%20Graphcore's%20Community-blue?style=flat-square&logo=slack)](https://www.graphcore.ai/join-community)
+
+## License
+
+The contents of this repository are made available according to the terms of the MIT license. See the included [LICENSE](LICENSE) file for details.
+
