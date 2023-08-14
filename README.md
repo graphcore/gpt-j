@@ -19,16 +19,14 @@ Try running GPT-J for yourself on Paperspace with Graphcore's IPU (Intelligence 
 | ------------- | ------------- | ------------- | ------------- |
 | Textual Entailment on IPU using GPT-J - Fine-tuning | Hugging Face | Fine-tuning | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/czHSUi)
 | Text generation with GPT-J 6B | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/OMBQrl)
-|
-Faster Text Generation with GPT-J using 4-bit Weight Quantization on IPUs | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/8ihX0R)
+| Faster Text Generation with GPT-J using 4-bit Weight Quantization on IPUs | Hugging Face | Inference | [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://ipu.dev/8ihX0R)
 
 
 In the **Textual Entailment on IPU using GPT-J - Fine-tuning** notebook, we show how to fine-tune a pre-trained GPT-J model running on a 16-IPU system on Paperspace. We will explain how you can fine-tune GPT-J for Text Entailment on the GLUE MNLI dataset to reach SOTA performance, whilst being much more cost-effective than its larger cousins.
 
 In the **Text generation with GPT-J 6B** notebook, we demonstrate how easy it is to run GPT-J on the Graphcore IPU using this implementation of the model and 🤗 Hub checkpoints of the model weights.
 
-In the **
-Faster Text Generation with GPT-J using 4-bit Weight Quantization on IPUs** notebook, we show how to use group quantisation to compress model parameters to 4 bits with no fine-tuning, using 4x less memory and speeding up inference on GPT-J by ~1.5x.
+In the **Faster Text Generation with GPT-J using 4-bit Weight Quantization on IPUs** notebook, we show how to use group quantisation to compress model parameters to 4 bits with no fine-tuning, using 4x less memory and speeding up inference on GPT-J by ~1.5x.
 
 
 ## GPT-J resources
